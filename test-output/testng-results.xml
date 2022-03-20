@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15622" started-at="2022-03-19T18:20:08Z" finished-at="2022-03-19T18:20:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15622" started-at="2022-03-19T18:20:08Z" finished-at="2022-03-19T18:20:24Z">
+      <class name="CreateAccountPageTest">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:CreateAccountPageTest@6001e643]" name="getDriver" is-config="true" duration-ms="3809" started-at="2022-03-19T18:20:08Z" finished-at="2022-03-19T18:20:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method status="PASS" signature="validateRegistrationPageIsDisplayed()[pri:2, instance:CreateAccountPageTest@6001e643]" name="validateRegistrationPageIsDisplayed" duration-ms="860" started-at="2022-03-19T18:20:12Z" description="Registration Page | Check that registration page is displayed " finished-at="2022-03-19T18:20:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRegistrationPageIsDisplayed -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:CreateAccountPageTest@6001e643]" name="takeScreenShotOnFailure" is-config="true" duration-ms="632" started-at="2022-03-19T18:20:13Z" finished-at="2022-03-19T18:20:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateRegistrationPageIsDisplayed status=SUCCESS method=CreateAccountPageTest.validateRegistrationPageIsDisplayed()[pri:2, instance:CreateAccountPageTest@6001e643] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:CreateAccountPageTest@6001e643]" name="getDriver" is-config="true" duration-ms="3474" started-at="2022-03-19T18:20:14Z" finished-at="2022-03-19T18:20:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method status="PASS" signature="validateMandatoryFields()[pri:3, instance:CreateAccountPageTest@6001e643]" name="validateMandatoryFields" duration-ms="966" started-at="2022-03-19T18:20:17Z" description="Registration Page | Check that warning message is displayed when user misses to input a value in a mandatory field" finished-at="2022-03-19T18:20:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateMandatoryFields -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:CreateAccountPageTest@6001e643]" name="takeScreenShotOnFailure" is-config="true" duration-ms="623" started-at="2022-03-19T18:20:18Z" finished-at="2022-03-19T18:20:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateMandatoryFields status=SUCCESS method=CreateAccountPageTest.validateMandatoryFields()[pri:3, instance:CreateAccountPageTest@6001e643] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:CreateAccountPageTest@6001e643]" name="getDriver" is-config="true" duration-ms="3476" started-at="2022-03-19T18:20:19Z" finished-at="2022-03-19T18:20:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method status="PASS" signature="validatePasswordMatching()[pri:4, instance:CreateAccountPageTest@6001e643]" name="validatePasswordMatching" duration-ms="1126" started-at="2022-03-19T18:20:22Z" description="Registration Page | Check that warning message is displayed when user inputs pswd1 different from pswd2" finished-at="2022-03-19T18:20:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePasswordMatching -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:CreateAccountPageTest@6001e643]" name="takeScreenShotOnFailure" is-config="true" duration-ms="630" started-at="2022-03-19T18:20:23Z" finished-at="2022-03-19T18:20:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validatePasswordMatching status=SUCCESS method=CreateAccountPageTest.validatePasswordMatching()[pri:4, instance:CreateAccountPageTest@6001e643] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+      </class> <!-- CreateAccountPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
