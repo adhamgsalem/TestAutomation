@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestAutomation - TestSuite">
+	<test name="Test">
+		<classes>
+	    <class name="testPackage.LandingPageTest"/>
+        <class name="testPackage.CreateAccountPageTest"/>
+		</classes>
+	</test>
+</suite>
