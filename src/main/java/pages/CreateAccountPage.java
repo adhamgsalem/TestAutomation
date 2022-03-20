@@ -1,128 +1,131 @@
 package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.github.javafaker.Faker;
+
 public class CreateAccountPage {
 	
-	By createAccountMsg = By.xpath ("//h1[contains(text(),'Create an Account')]");
-	By firstName = By.xpath ("//input[@id='firstname']");
-	By middleName = By.xpath ("//input[@id='middlename']");
-	By lastName = By.xpath ("//input[@id='lastname']");
-	By emailAddress = By.xpath ("//input[@id='email_address']");
-	By password = By.xpath ("//input[@id='password']");
-	By passwordConfirm = By.xpath ("//input[@id='confirmation']");
-	By newLetterCheckBox = By.xpath ("//input[@id='is_subscribed']");
-	By backBtn = By.xpath ("//body/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[2]/p[1]/a[1]");
-	By registerBtn = By.xpath ("//span[contains(text(),'Register')]");
-	By firstNameRequired = By.xpath ("//div[@id='advice-required-entry-firstname']");
-	By lastNameRequired = By.xpath ("//div[@id='advice-required-entry-lastname']");
-	By emailAddressRequired = By.xpath ("//div[@id='advice-required-entry-email_address']");
-	By passwordRequired = By.xpath ("//div[@id='advice-required-entry-email_address']");
-	By passwordConfrimRequired = By.xpath ("//div[@id='advice-required-entry-confirmation']");
-	By passwordComplexityMsg = By.xpath ("//div[@id='advice-validate-password-password']");
-	By passwordMatchMsg = By.xpath ("//div[@id='advice-validate-cpassword-confirmation']");
+	Faker data = new Faker();
 
-	
+	By createAccountMsg = By.xpath("//h1[contains(text(),'Create an Account')]");
+	By firstName = By.xpath("//input[@id='firstname']");
+	By middleName = By.xpath("//input[@id='middlename']");
+	By lastName = By.xpath("//input[@id='lastname']");
+	By emailAddress = By.xpath("//input[@id='email_address']");
+	By password = By.xpath("//input[@id='password']");
+	By passwordConfirm = By.xpath("//input[@id='confirmation']");
+	By newLetterCheckBox = By.xpath("//input[@id='is_subscribed']");
+	By backBtn = By.xpath("//body/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/form[1]/div[2]/p[1]/a[1]");
+	By registerBtn = By.xpath("//span[contains(text(),'Register')]");
+	By firstNameRequired = By.xpath("//div[@id='advice-required-entry-firstname']");
+	By lastNameRequired = By.xpath("//div[@id='advice-required-entry-lastname']");
+	By emailAddressRequired = By.xpath("//div[@id='advice-required-entry-email_address']");
+	By passwordRequired = By.xpath("//div[@id='advice-required-entry-email_address']");
+	By passwordConfrimRequired = By.xpath("//div[@id='advice-required-entry-confirmation']");
+	By passwordComplexityMsg = By.xpath("//div[@id='advice-validate-password-password']");
+	By passwordMatchMsg = By.xpath("//div[@id='advice-validate-cpassword-confirmation']");
+
 	WebDriver driver;
 	WebDriverWait wait;
-	
+
 	public CreateAccountPage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		wait = new WebDriverWait(driver, 5);
 	}
-	
+
 	public String getTitle() {
 		return driver.getTitle();
 	}
-	
-	public boolean geCreateAccounteMsg () {
+
+	public boolean getCreateAccounteMsg() {
 		return driver.findElement(createAccountMsg).isDisplayed();
 	}
-	
-	public boolean firstNameRequiredMsgDisplayed () {
+
+	public boolean firstNameRequiredMsgDisplayed() {
 		return driver.findElement(firstNameRequired).isDisplayed();
 	}
-	
-	public boolean lastNameRequiredMsgDisplayed () {
+
+	public boolean lastNameRequiredMsgDisplayed() {
 		return driver.findElement(lastNameRequired).isDisplayed();
 	}
-	
-	public boolean emailAddressRequiredMsgDisplayed () {
+
+	public boolean emailAddressRequiredMsgDisplayed() {
 		return driver.findElement(emailAddressRequired).isDisplayed();
 	}
-	
-	public boolean passwordRequiredMsgDisplayed () {
+
+	public boolean passwordRequiredMsgDisplayed() {
 		return driver.findElement(passwordRequired).isDisplayed();
 	}
-	
-	public boolean passwordConfirmationRequiredMsgDisplayed () {
+
+	public boolean passwordConfirmationRequiredMsgDisplayed() {
 		return driver.findElement(passwordConfrimRequired).isDisplayed();
 	}
-	
-	public boolean passwordDoesNotMatchMsgDisplayed () {
+
+	public boolean passwordDoesNotMatchMsgDisplayed() {
 		return driver.findElement(passwordMatchMsg).isDisplayed();
 	}
-	
-	public boolean passwordComplixtyMsgDisplayed () {
+
+	public boolean passwordComplixtyMsgDisplayed() {
 		return driver.findElement(passwordComplexityMsg).isDisplayed();
 	}
-	
-	public void typeFirstName () {
+
+	public void typeFirstName() {
 		driver.findElement(firstName).clear();
 		driver.findElement(firstName).sendKeys("Adham");
 	}
 
-	public void typeMiddleName () {
+	public void typeMiddleName() {
 		driver.findElement(middleName).clear();
 		driver.findElement(middleName).sendKeys("Gomaa");
 	}
-	
-	public void typeLastName () {
+
+	public void typeLastName() {
 		driver.findElement(lastName).clear();
 		driver.findElement(lastName).sendKeys("Salem");
 	}
-	
-	public void typeEmailAddress () {
+
+	public void typeEmailAddress() {
 		driver.findElement(emailAddress).clear();
-		driver.findElement(emailAddress).sendKeys("adhamgsalem@mailinator.com");
+		driver.findElement(emailAddress).sendKeys(data.internet().emailAddress());
 	}
-	
-	public void typePassword () {
+
+	public void typePassword() {
 		driver.findElement(password).clear();
 		driver.findElement(password).sendKeys("TestPassword");
 	}
-	
-	public void typePasswordIncorrect () {
+
+	public void typePasswordIncorrect() {
 		driver.findElement(password).clear();
 		driver.findElement(password).sendKeys("AA");
 	}
-	
-	public void typePasswordConfirmation () {
+
+	public void typePasswordConfirmation() {
 		driver.findElement(passwordConfirm).clear();
 		driver.findElement(passwordConfirm).sendKeys("TestPassword");
 	}
-	
-	public void typePasswordConfirmationWrong () {
+
+	public void typePasswordConfirmationWrong() {
 		driver.findElement(passwordConfirm).clear();
 		driver.findElement(passwordConfirm).sendKeys("TestPasswor");
 	}
-	
-	public void subscripeToNewsLetter () {
+
+	public void subscripeToNewsLetter() {
 		wait.until(ExpectedConditions.elementToBeClickable(newLetterCheckBox));
 		driver.findElement(newLetterCheckBox).click();
 	}
-	
-	public void clickBackBtn () {
+
+	public void clickBackBtn() {
 		wait.until(ExpectedConditions.elementToBeClickable(backBtn));
 		driver.findElement(firstName).sendKeys("Adham");
 	}
-	
-	public void clickRegisterBtn () {
+
+	public void clickRegisterBtn() {
 		wait.until(ExpectedConditions.elementToBeClickable(registerBtn));
 		driver.findElement(registerBtn).click();
 	}
-
 
 }

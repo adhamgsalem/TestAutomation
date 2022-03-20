@@ -1,4 +1,5 @@
 package pages;
+
 import static org.testng.Assert.assertEquals;
 import java.io.File;
 import java.io.IOException;
@@ -27,7 +28,7 @@ public class BaseClass {
 	@Parameters("browser")
 	// Browser Driver (parallel)
 	public void getDriver() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\adham\\Desktop\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/Users/adhamsalem/git/TestAutomation/drivers/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--start-maximized");
 		driver = new ChromeDriver(chromeOptions);
@@ -44,7 +45,7 @@ public class BaseClass {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
 			System.out.println(testResult.getStatus());
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(scrFile, new File("C://Users//adham//Desktop//SS" + testResult.getName() + "-"
+			FileUtils.copyFile(scrFile, new File("/Users/adhamsalem/git/TestAutomation/failedtests" + testResult.getName() + "-"
 					+ Arrays.toString(testResult.getParameters()) + ".jpg"));
 		}
 		driver.quit();
