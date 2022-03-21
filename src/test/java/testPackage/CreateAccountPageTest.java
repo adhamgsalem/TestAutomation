@@ -56,7 +56,7 @@ public class CreateAccountPageTest extends BaseClass {
 		Assert.assertTrue(registrationPage.passwordComplixtyMsgDisplayed());
 	}
 
-	@Test(priority = 6, description = "Registration Page | Check that after successful registration the user gets a registration success message")
+	@Test(priority = 6, description = "Registration Page | Check that after successful registration the user gets a registration success message and can search for a product and assert on the result set")
 	public void validateValidRegistration() {
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.clickAccountIcon();
